@@ -1,6 +1,5 @@
 package ro.teamnet.zerotohero.oop.runapp;
 
-import org.omg.CORBA.DynAnyPackage.Invalid;
 import ro.teamnet.zerotohero.exceptions.InvalidDimensionException;
 import ro.teamnet.zerotohero.oop.immutable.Watch;
 
