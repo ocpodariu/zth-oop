@@ -28,6 +28,15 @@ public class RunApp {
 
         ShapeBehaviour shapeBehaviour = new Square(10);
         System.out.println("The shape's area is " + shapeBehaviour.area());
+
+        System.out.println("\nPoint comparison:");
+        Object p1 = new Point(10, 20);
+        Object p2 = new Point(50, 100);
+        Object p3 = new Point(10, 20);
+        Object obj = new Circle();
+        System.out.println("P1 equals P2 is " + p1.equals(p2) + ".");
+        System.out.println("P1 equals P3 is " + p1.equals(p3) + ".");
+        System.out.println("P1 equals a circle is " + p1.equals(obj) + ".");
     }
 
 }
