@@ -1,5 +1,7 @@
 package ro.teamnet.zerotohero.oop.immutable;
 
+import ro.teamnet.zerotohero.exceptions.InvalidDimensionException;
+
 /**
  * Author: Ovidiu
  * Date:   4/21/2015
@@ -16,8 +18,11 @@ public class Watch {
 
     public Watch(String brand, String modelNumber, String shape, String glass,
                  String caseMaterial, double caseDimension,
-                 String braceletColor, String braceletMaterial)
+                 String braceletColor, String braceletMaterial) throws InvalidDimensionException
     {
+        if (caseDimension <= 0)
+            throw new InvalidDimensionException("The dimension must be a positive number!", caseDimension);
+
         this.brand = brand;
         this.modelNumber = modelNumber;
         this.shape = shape;
