@@ -13,6 +13,9 @@ public class GCExample {
         List<DemoObject> demoObjects = new ArrayList<DemoObject>();
 
         while (true) {
+            // Force GarbageCollector after 5 instances
+            if (demoObjects.size() > 5)
+                demoObjects.clear();
             demoObjects.add(new DemoObject());
         }
     }
